@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calc-1</title>
+</head>
+<body>
+	<h3>JavaScript Calculator</h3>
+
+	<input type="text" name="input1" placeholder="0" id="input1">
+	<input type="text" name="input2" placeholder="0" id="input2">
+
+	<button id="add" onclick="add()">add</button>
+	<button id="subtract" onclick="subtract()">subtract</button>
+	<button id="mulitply" onclick="mulitply()">mulitply</button>
+	<button id="divide" onclick="divide()">divide</button>
+
+	<script type="text/javascript">
+		var input1, input2, result
+
+		function setValues () {
+			input1 = Number(document.getElementById('input1').value)
+			input2 = Number(document.getElementById('input2').value)
+		}
+
+		function add () {
+			setValues()
+			result = input1 + input2
+			alert(result)
+		}
+
+		function subtract () {
+			setValues()
+			result = input1 - input2
+			alert(result)
+		}
+
+		function mulitply () {
+			setValues()
+			result = input1 * input2
+			alert(result)
+		}
+
+		function divide () {
+			setValues()
+			result = input1 / input2
+			alert(result)
+		}
+	</script>
+
+</body>
+</html> 

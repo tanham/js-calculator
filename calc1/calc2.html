@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calc-2</title>
+
+	<style type="text/css">
+
+		h3 {
+			/*margin: 0 auto;*/
+			text-align: center;
+			margin-top: 20px;
+			padding-top: 10px;
+		}
+		.container {
+			margin: 0 auto;
+			background-color: grey;
+			width: 300px;
+		}
+
+		form {
+			margin: 0 auto;
+			width: 200px;
+			height: 300px;
+		}
+
+		#display {
+			width: 200px;
+			height: 30px;
+		}
+
+		input[type=button], input[type=reset] {
+			margin-top: 10px;
+			width: 63px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">	
+		<h3>Javascript Calculator</h3>
+		<form name="calc">
+			<input type="display" name="display" id="display" placeholder="0">
+			<br>
+	
+			<input type="reset" name="btnClear" value="c">
+			<input type="button" name="btnEqual" value="=" onclick="calc.display.value=eval(calc.display.value)">
+			<input type="button" class="button" name="btnAdd" value="+" onclick="displayValue(this.value)">
+			<br>
+			<input type="button" class="button" name="btnDivide" value="/" onclick="displayValue(this.value)">
+			<input type="button" class="button" name="btnMulitply" value="*" onclick="displayValue(this.value)">
+			<input type="button" class="button" name="btnSubtract" value="-" onclick="displayValue(this.value)">
+			<br>
+			<input type="button" class="button" name="btn7" value=7 onclick="displayValue(this.value)">
+			<input type="button" class="button" name="btn8" value=8 onclick="displayValue(this.value)">
+			<input type="button" class="button" name="btn9" value=9 onclick="displayValue(this.value)">
+			<br>
+			<input type="button" class="button" name="btn4" value=4 onclick="displayValue(this.value)">
+			<input type="button" class="button" name="btn5" value=5 onclick="displayValue(this.value)">
+			<input type="button" class="button" name="btn6" value=6 onclick="displayValue(this.value)">
+			<br>
+			<input type="button" class="button" name="btn1" value=1 onclick="displayValue(this.value)">
+			<input type="button" class="button" name="btn2" value=2 onclick="displayValue(this.value)">
+			<input type="button" class="button" name="btn3" value=3 onclick="displayValue(this.value)">
+			<br>
+			
+			<input type="button" name="btn0" value=0 onclick="displayValue(this.value)">
+		</form>
+	</div>
+
+	<script type="text/javascript">
+
+	
+		function displayValue (num) {
+			document.calc.display.value = document.calc.display.value + num
+		}
+	</script>
+
+</body>
+</html>
