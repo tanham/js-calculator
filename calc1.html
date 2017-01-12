@@ -2,47 +2,98 @@
 <html>
 <head>
 	<title>calc-1</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<style type="text/css">
+		
+		body {
+			text-align: center;
+			margin-top: 0px;
+			font-size: 26px;
+     		background-color: #566270;
+		}
+
+		.container {
+			margin: 0 auto;
+			margin-top: 0px;
+			padding-top: 0px;
+			width: 70%;
+			height: 1200px;
+			background-color: #566270;
+		}
+
+		hr {
+			width: 70%;
+		}
+		
+		.input {	
+			font-size: 20px;
+		}
+		
+		.button {
+			font-size: 20px;
+
+		}
+
+	</style>
 </head>
 <body>
-	<h3>JavaScript Calculator</h3>
 
-	<input type="text" name="input1" placeholder="0" id="input1">
-	<input type="text" name="input2" placeholder="0" id="input2">
+	<div class="container">
+		<h3>Simple JavaScript Calculator 1</h3>
+		
+		<hr>
+		
+		<div class="input">
+			<input type="text" name="input1" placeholder="0" id="input1">
+			<input type="text" name="input2" placeholder="0" id="input2">
+		</div>
 
-	<button id="add" onclick="add()">add</button>
-	<button id="subtract" onclick="subtract()">subtract</button>
-	<button id="mulitply" onclick="mulitply()">mulitply</button>
-	<button id="divide" onclick="divide()">divide</button>
+		<br>
+	
+		<div class="button">
+			<button id="add" onclick="add()">add</button>
+			<button id="subtract" onclick="subtract()">subtract</button>
+			<button id="mulitply" onclick="mulitply()">mulitply</button>
+			<button id="divide" onclick="divide()">divide</button>
+		</div>
+	
+	</div>
+
 
 	<script type="text/javascript">
+
 		var input1, input2, result
 
-		function setValues () {
+
+		function setValue () {
+			//grab the value of each input
 			input1 = Number(document.getElementById('input1').value)
 			input2 = Number(document.getElementById('input2').value)
 		}
 
 		function add () {
-			setValues()
-			result = input1 + input2
+			setValue()
+			result = (input1 + input2)
 			alert(result)
 		}
 
 		function subtract () {
-			setValues()
-			result = input1 - input2
+			setValue()
+			result = (input1 - input2)
 			alert(result)
 		}
 
 		function mulitply () {
-			setValues()
-			result = input1 * input2
+			setValue()
+			result = (input1 * input2)
 			alert(result)
 		}
 
 		function divide () {
-			setValues()
-			result = input1 / input2
+			setValue()
+			result = (input1 / input2)
 			alert(result)
 		}
 	</script>
